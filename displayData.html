@@ -70,6 +70,27 @@
     </style>
   </head>
   <body>
+    <div>
+      <select name="" id="filter">
+        <option value="all">All</option>
+        <option value="lowTOHigh">LOw To High</option>
+        <option value="highToLow">High To Low</option>
+      </select>
+
+      <select name="" id="category">
+        <option value="all">All</option>
+        <option value="General">General</option>
+        <option value="OBC">Obc</option>
+        <option value="sc">Sc</option>
+        <option value="st">St</option>
+      </select>
+
+      <select name="" id="status">
+        <option value="all">All</option>
+        <option value="married">Married</option>
+        <option value="unmarried">Unmarried</option>
+      </select>
+    </div>
     <table id="table">
       <thead id="thead">
         <tr id="tr">
@@ -104,5 +125,5 @@
       </tbody>
     </table>
   </body>
- <script src="./displayData.js"></script>
+  <script src="./displayData.js"></script>
 </html>

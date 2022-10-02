@@ -29,7 +29,11 @@ function display(Alldata) {
 
     col9.innerText = "delete";
     col9.setAttribute("id", "delete");
-
+    col9.addEventListener("click",()=>{
+        Alldata.splice(index,1)
+        localStorage.setItem("alldata",JSON.stringify(Alldata))
+        display(Alldata)
+    })
     let col10 = document.createElement("td");
     col10.innerText = "Update";
     col10.setAttribute("id", "edit");
