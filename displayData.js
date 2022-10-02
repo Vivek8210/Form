@@ -50,3 +50,22 @@ function display(Alldata) {
 }
 
 display(Alldata);
+
+
+// filter by age.......
+document.getElementById("filter").addEventListener("change",function(){
+  let value=document.getElementById("filter").value
+  
+  if(value==="all"){
+      display(Alldata)
+  }else if(value == "lowTOHigh"){
+   console.log(Alldata)
+      Alldata.sort((a,b)=> a.age- b.age)
+      display(Alldata)
+  }
+  else{
+      Alldata.sort((a,b)=> b.age- a.age) 
+      console.log(Alldata)
+      display(Alldata)
+  }
+})
