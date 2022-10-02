@@ -82,3 +82,17 @@ document.getElementById("category").addEventListener("change", function () {
     display(category);
   }
 });
+
+// filter by status
+
+document.getElementById("status").addEventListener("change", function () {
+  let value = document.getElementById("status").value;
+  if (value === "all") {
+    display(Alldata);
+  } else {
+    let status = Alldata.filter((ele) => {
+      return ele.status === value;
+    });
+    display(status);
+  }
+});
