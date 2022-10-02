@@ -29,11 +29,11 @@ function display(Alldata) {
 
     col9.innerText = "delete";
     col9.setAttribute("id", "delete");
-    col9.addEventListener("click",()=>{
-        Alldata.splice(index,1)
-        localStorage.setItem("alldata",JSON.stringify(Alldata))
-        display(Alldata)
-    })
+    col9.addEventListener("click", () => {
+      Alldata.splice(index, 1);
+      localStorage.setItem("alldata", JSON.stringify(Alldata));
+      display(Alldata);
+    });
     let col10 = document.createElement("td");
     col10.innerText = "Update";
     col10.setAttribute("id", "edit");
@@ -51,21 +51,34 @@ function display(Alldata) {
 
 display(Alldata);
 
-
 // filter by age.......
-document.getElementById("filter").addEventListener("change",function(){
-  let value=document.getElementById("filter").value
-  
-  if(value==="all"){
-      display(Alldata)
-  }else if(value == "lowTOHigh"){
-   console.log(Alldata)
-      Alldata.sort((a,b)=> a.age- b.age)
-      display(Alldata)
+document.getElementById("filter").addEventListener("change", function () {
+  let value = document.getElementById("filter").value;
+
+  if (value === "all") {
+    display(Alldata);
+  } else if (value == "lowTOHigh") {
+    console.log(Alldata);
+    Alldata.sort((a, b) => a.age - b.age);
+    display(Alldata);
+  } else {
+    Alldata.sort((a, b) => b.age - a.age);
+    console.log(Alldata);
+    display(Alldata);
   }
-  else{
-      Alldata.sort((a,b)=> b.age- a.age) 
-      console.log(Alldata)
-      display(Alldata)
+});
+
+// filter by category
+document.getElementById("category").addEventListener("change", function () {
+  let value = document.getElementById("category").value;
+
+  if (value === "all") {
+    display(Alldata);
+  } else {
+    var category = Alldata.filter((ele) => {
+      return ele.category === value;
+      console.log("vvv");
+    });
+    display(category);
   }
-})
+});
