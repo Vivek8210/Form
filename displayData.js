@@ -72,7 +72,7 @@ document.getElementById("filter").addEventListener("change", function () {
 document.getElementById("category").addEventListener("change", function () {
   let value = document.getElementById("category").value;
 
-  if (value === "all") {
+  if (value === "none") {
     display(Alldata);
   } else {
     var category = Alldata.filter((ele) => {

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./index.css" />
+    <style>
+        #main{
+            width: 25%;
+            height: 550px;
+            border: 1px solid black;
+            justify-content: center;
+            text-align: center;
+            margin: auto;
+            padding: 15px;
+            box-shadow: 15px 15px 5px;
+            margin-top: 20px;
+        }
+        #name{
+            width: 80%;
+            padding: 10px;
+            font-size: large;
+        }
+        #category{
+            width: 85%;
+            padding: 10px;
+            font-size: large;
+        }
+        #email{
+            width: 80%;
+            padding: 10px;
+            font-size: large;
+        }
+        #date{
+            width: 80%;
+            padding: 10px;
+            font-size: large;
+        }
+        #number{
+            width: 80%;
+            padding: 10px;
+            font-size: large;
+        }
+        #file{
+            width: 80%;
+            padding: 10px;
+            font-size: large;
+        }
+        #age{
+            width: 80%;
+            padding: 10px;
+            font-size: large;
+        }
+        #genderdiv{
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            font-size: large;
+            padding: 10px;
+        }
+        #statusdiv{
+            display: flex;
+            gap: 25px;
+            justify-content: center;
+            font-size: large;
+            padding: 10px;
+        }
+        #submit{
+            width: 60%;
+            background-color: green;
+            color: white;
+            padding: 10px;
+            margin-top: 40px;
+            cursor: pointer;
+        }
+        option{
+            font-size: large;
+            
+        }
+       
+    </style>
+</head>
+<body>
+   <div id="header"></div>
+    <div id="main">
+        <form id="formsub">
+          
+            <input type="text" placeholder="Type name here....." id="name" required><br><br>
+            <input type="text" placeholder="Type email here....." id="email" required><br><br>
+            <input type="number" placeholder="Type number here....." id="number" required><br><br>
+            <input type="number" placeholder="age...." id="age" required><br><br>
+            <input type="date" id="date" required><br><br>
+         
+        
+            <select name="" id="category" required>
+                <option value="None">category</option>
+                <option value="General">General</option>
+                <option value="OBC">Obc</option>
+                <option value="sc">Sc</option>
+                <option value="st">St</option>
+            
+            </select><br><br>
+
+            <div id="genderdiv">
+                <div>
+                    <label for="">female</label>
+                    <input type="radio" id="gender" name="gender"  value="female " required/>
+                </div>
+                <div>
+                    <label for="">male</label>
+                    <input type="radio" id="gender" name="gender" value="male " required/>
+                </div>
+                <div>
+                    <label for="">other</label>
+                    <input type="radio" id="gender" name="gender" value="other" required/>
+                </div>
+            </div>
+           
+          <div id="statusdiv">
+            <div id="">
+               <label for="">married</label>
+                
+                <input type="radio" id="status" name="status" value="married" required>
+                
+            </div>
+            <div>
+                <label for="status">unmarried</label>
+                <input type="radio" id="status" name="status" value="unmarried" required>
+            </div>
+          </div>
+         
+           <input type="submit" id="submit">
+        </form>
+    </div>
+<script src="./home.js"></script>
+
+</html>
+<script type="module" >
+      import index from "./index.js";
+  var header = document.getElementById("header");
+  header.innerHTML = index();
+</script>
+

@@ -5,7 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="./index.css" />
     <style>
+      #display{
+        margin-top: 20px;
+      }
       table {
         width: 100%;
 
@@ -70,7 +74,8 @@
     </style>
   </head>
   <body>
-    <div>
+    <div id="header"></div>
+    <div id="display">
       <select name="" id="filter">
         <option value="all">All</option>
         <option value="lowTOHigh">LOw To High</option>
@@ -78,7 +83,7 @@
       </select>
 
       <select name="" id="category">
-        <option value="all">All</option>
+        <option value="None">None</option>
         <option value="General">General</option>
         <option value="OBC">Obc</option>
         <option value="sc">Sc</option>
@@ -127,3 +132,8 @@
   </body>
   <script src="./displayData.js"></script>
 </html>
+<script type="module" >
+  import index from "./index.js";
+var header = document.getElementById("header");
+header.innerHTML = index();
+</script>
